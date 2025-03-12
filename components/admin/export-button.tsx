@@ -3,8 +3,18 @@
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 
+// Define a proper interface for waitlist entries
+interface WaitlistEntry {
+  name: string;
+  email: string;
+  unique_edge: string;
+  reason: string;
+  status: string;
+  created_at: string;
+}
+
 interface ExportButtonProps {
-  entries: any[]
+  entries: WaitlistEntry[]
 }
 
 export function ExportButton({ entries }: ExportButtonProps) {

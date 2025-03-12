@@ -35,7 +35,7 @@ export default async function WaitlistAdmin() {
                   <CardTitle className="text-xl">{entry.name}</CardTitle>
                   <Badge
                     variant={
-                      entry.status === "APPROVED" ? "success" : entry.status === "REJECTED" ? "destructive" : "outline"
+                      entry.status === "APPROVED" ? "default" : entry.status === "REJECTED" ? "destructive" : "outline"
                     }
                   >
                     {entry.status.toLowerCase()}

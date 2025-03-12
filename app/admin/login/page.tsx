@@ -10,7 +10,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 export default function AdminLogin() {
   const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
   const router = useRouter()
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -43,7 +42,6 @@ export default function AdminLogin() {
                   required
                 />
               </div>
-              {error && <p className="text-sm text-red-500">{error}</p>}
             </div>
           </CardContent>
           <CardFooter>

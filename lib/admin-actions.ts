@@ -36,9 +36,10 @@ export async function updateApplicationStatus(entryId: string, status: "APPROVED
     revalidatePath("/admin/waitlist")
 
     return { success: true }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error updating application status:", error)
-    return { success: false, error: error.message || "Failed to update application status" }
+    const errorMessage = error instanceof Error ? error.message : "Failed to update application status";
+    return { success: false, error: errorMessage }
   }
 }
 
