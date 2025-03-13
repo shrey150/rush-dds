@@ -9,6 +9,14 @@ export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
     autoRefreshToken: false,
     persistSession: false,
   },
+  db: {
+    schema: 'public',
+  },
+  global: {
+    headers: {
+      'x-no-cache': 'true',
+    },
+  },
 })
 
 // Create a Supabase client with the anon key for client-side operations

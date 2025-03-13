@@ -5,6 +5,7 @@ import { Download } from "lucide-react"
 
 // Define a proper interface for waitlist entries
 interface WaitlistEntry {
+  id: string;
   name: string;
   email: string;
   unique_edge: string;
@@ -19,11 +20,16 @@ interface ExportButtonProps {
 
 export function ExportButton({ entries }: ExportButtonProps) {
   const handleExport = () => {
+    // Ensure we have all entries sorted by creation date
+    const sortedEntries = [...entries].sort((a, b) => 
+      new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    );
+
     // Convert entries to CSV format
     const headers = ["Name", "Email", "Unique Edge", "Reason", "Status", "Created At"]
     const csvRows = [
       headers.join(","),
-      ...entries.map((entry) =>
+      ...sortedEntries.map((entry) =>
         [
           `"${entry.name.replace(/"/g, '""')}"`,
           `"${entry.email.replace(/"/g, '""')}"`,
@@ -42,7 +48,7 @@ export function ExportButton({ entries }: ExportButtonProps) {
     const url = URL.createObjectURL(blob)
     const link = document.createElement("a")
     link.setAttribute("href", url)
-    link.setAttribute("download", `waitlist-export-${new Date().toISOString().split("T")[0]}.csv`)
+    link.setAttribute("download", `Waitlist Export ${new Date().toLocaleDateString().replace(/\//g, ' ')}.csv`)
     link.style.visibility = "hidden"
     document.body.appendChild(link)
     link.click()

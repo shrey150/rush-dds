@@ -5,17 +5,23 @@ import { Badge } from "@/components/ui/badge"
 import { ApproveRejectButtons } from "@/components/admin/approve-reject-buttons"
 import { ExportButton } from "@/components/admin/export-button"
 
+export const revalidate = 0; // Disable caching
+
 export default async function WaitlistAdmin() {
-  // Fetch waitlist entries from Supabase
+  // Fetch waitlist entries from Supabase with cache bypassing
   const { data: entries, error } = await supabaseAdmin
     .from("waitlist_entries")
     .select("*")
     .order("created_at", { ascending: false })
+    .throwOnError()
 
   if (error) {
     console.error("Error fetching entries:", error)
     return <div>Error loading waitlist entries</div>
   }
+
+  // Ensure we have data and log it for debugging
+  console.log(`Fetched ${entries?.length || 0} waitlist entries`)
 
   return (
     <div className="container mx-auto py-10">
