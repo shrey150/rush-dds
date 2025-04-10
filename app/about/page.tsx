@@ -37,7 +37,7 @@ export default function About() {
                         Who Are We?
                     </h1>
                     <p className="text-lg md:text-xl text-gold-300/80 max-w-2xl mx-auto italic">
-                        &ldquo;Per Ardua Dd Astra&rdquo;
+                        &ldquo;Per Ardua Ad Astra&rdquo;
                     </p>
                 </div>
 
