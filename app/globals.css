@@ -8,8 +8,6 @@
   }
 }
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -37,6 +35,9 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-serif: var(--font-serif);
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -66,13 +67,21 @@
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-serif);
   }
+}
+
+/* Colors for the gold theme */
+:root {
+  --gold-300: 45 94% 85%;
+  --gold-400: 45 94% 75%;
+  --gold-500: 45 94% 65%;
+  --gold-600: 45 94% 55%;
+  --gold-700: 45 94% 45%;
 }

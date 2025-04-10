@@ -33,7 +33,7 @@ export default function Waitlist() {
             {/* Bottom right footer */}
             {/* Bottom right footer */}
             <div className="absolute bottom-0 right-0 p-6 text-xs text-gold-700/50 z-20">
-                <p>By invitation only</p>
+                <p>By Invitation Only</p>
             </div>
         </div>
     )

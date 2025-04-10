@@ -81,21 +81,21 @@ export function WaitlistForm() {
   }
 
   return (
-    <Card className="border-gold-500/20 bg-black/40 backdrop-blur-sm shadow-lg shadow-black/10">
+    <Card className="border-gold-500/20 bg-black/40 backdrop-blur-sm shadow-lg shadow-black/10 font-serif">
       <CardContent className="pt-6">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 font-serif">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-gold-400">Full Name</FormLabel>
+                  <FormLabel className="text-gold-400 font-serif">Full Name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="First and Last Name"
                       {...field}
-                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
+                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20 font-serif"
                     />
                   </FormControl>
                   <FormMessage className="text-gold-300" />
@@ -108,13 +108,13 @@ export function WaitlistForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-gold-400">Email</FormLabel>
+                  <FormLabel className="text-gold-400 font-serif">Email</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="yourname@email.com"
                       type="email"
                       {...field}
-                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
+                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20 font-serif"
                     />
                   </FormControl>
                   <FormMessage className="text-gold-300" />
@@ -127,12 +127,12 @@ export function WaitlistForm() {
               name="profession"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-gold-400">Unique edge</FormLabel>
+                  <FormLabel className="text-gold-400 font-serif">Unique edge</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="What makes you interesting?"
                       {...field}
-                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
+                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20 font-serif"
                     />
                   </FormControl>
                   <FormMessage className="text-gold-300" />
@@ -145,15 +145,15 @@ export function WaitlistForm() {
               name="reason"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-gold-400">Why do you want to join?</FormLabel>
+                  <FormLabel className="text-gold-400 font-serif">Why do you want to join?</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Tell us a bit about yourself and why you're interested in joining our network..."
-                      className="min-h-[100px] bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
+                      className="min-h-[100px] bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20 font-serif"
                       {...field}
                     />
                   </FormControl>
-                  <FormDescription className="text-gold-700/70">This helps us understand if you&apos;re a good fit for our community.</FormDescription>
+                  <FormDescription className="text-gold-700/70 font-serif">This helps us understand if you&apos;re a good fit for our community.</FormDescription>
                   <FormMessage className="text-gold-300" />
                 </FormItem>
               )}
@@ -161,7 +161,7 @@ export function WaitlistForm() {
 
             <Button
               type="submit"
-              className="w-full bg-transparent text-gold-400 hover:bg-gold-500/10 hover:text-gold-300 border border-gold-500/30"
+              className="w-full bg-transparent text-gold-400 hover:bg-gold-500/10 hover:text-gold-300 border border-gold-500/30 font-serif"
               disabled={isSubmitting}
             >
               {isSubmitting ? (

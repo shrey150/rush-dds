@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Globe } from "@/components/ui/globe"
@@ -6,7 +7,7 @@ import { StarsBackground } from "@/components/ui/stars-background"
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+    <div className="relative min-h-screen bg-black text-white overflow-hidden font-serif">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(38,38,38,0.4),transparent)]" />
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent" />
@@ -18,28 +19,45 @@ export default function Home() {
       <ShootingStars />
 
       {/* Main content */}
-      <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center h-screen">
-        <div className="max-w-3xl w-full mx-auto text-center space-y-4 -mt-16">
-          {/* Main heading with mysterious styling */}
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-gold-400 to-gold-600">
-            DIES DUCIT SOL
-          </h1>
+      <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center min-h-screen py-20">
+        <div className="max-w-3xl w-full mx-auto text-center flex flex-col gap-8 items-center">
+          {/* Main heading with hover effect */}
+          <div className="cursor-pointer w-full flex justify-center group">
+            <div className="relative">
+              {/* Abbreviated header */}
+              <h1
+                className="text-6xl md:text-8xl font-bold tracking-tight text-transparent bg-clip-text 
+                  bg-gradient-to-b from-gold-400 to-gold-600 transition-all duration-300 font-serif
+                  group-hover:opacity-0 group-hover:scale-90 opacity-100 scale-100"
+              >
+                DDS
+              </h1>
+              {/* Expanded header */}
+              <h1
+                className="absolute top-0 left-1/2 -translate-x-1/2 text-6xl md:text-8xl font-bold tracking-tight text-transparent 
+                  bg-clip-text bg-gradient-to-b from-gold-400 to-gold-600 transition-all duration-300 font-serif whitespace-nowrap
+                  group-hover:opacity-100 group-hover:scale-100 opacity-0 scale-90"
+              >
+                DIES DUCIT SOL
+              </h1>
+            </div>
+          </div>
 
-          <p className="text-lg md:text-xl text-gold-300/80 mt-6 max-w-xl mx-auto font-light tracking-wide">
+          <p className="text-lg md:text-xl text-gold-300/80 max-w-xl mx-auto font-light tracking-wide font-serif">
             The sun leads the day.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
             <Button
               asChild
               variant="outline"
-              className="border-gold-500/30 text-gold-400 hover:bg-gold-500/10 hover:text-gold-300 bg-transparent"
+              className="border-gold-500/30 text-gold-400 hover:bg-gold-500/10 hover:text-gold-300 bg-transparent font-serif"
             >
               <Link href="/waitlist">Request Invitation</Link>
             </Button>
             <Button
               asChild
-              className="bg-gold-600 text-black hover:bg-gold-500"
+              className="bg-gold-600 text-black hover:bg-gold-500 font-serif"
             >
               <Link href="/about">Learn More</Link>
             </Button>
@@ -56,10 +74,9 @@ export default function Home() {
       </div>
 
       {/* Bottom right footer */}
-      <div className="absolute bottom-0 right-0 p-6 text-xs text-gold-700/50 z-20">
-        <p>By invitation only</p>
+      <div className="absolute bottom-0 right-0 p-6 text-xs text-gold-700/50 z-20 font-serif">
+        <p>By Invitation Only</p>
       </div>
     </div>
   )
 }
-
