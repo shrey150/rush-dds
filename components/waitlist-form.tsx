@@ -81,7 +81,7 @@ export function WaitlistForm() {
   }
 
   return (
-    <Card className="border-slate-200 shadow-sm">
+    <Card className="border-gold-500/20 bg-black/40 backdrop-blur-sm shadow-lg shadow-black/10">
       <CardContent className="pt-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -90,11 +90,15 @@ export function WaitlistForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel className="text-gold-400">Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Rahul Dalvi" {...field} />
+                    <Input
+                      placeholder="First and Last Name"
+                      {...field}
+                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
+                    />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-gold-300" />
                 </FormItem>
               )}
             />
@@ -104,11 +108,16 @@ export function WaitlistForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className="text-gold-400">Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="arinjoy@umich.edu" type="email" {...field} />
+                    <Input
+                      placeholder="yourname@email.com"
+                      type="email"
+                      {...field}
+                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
+                    />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-gold-300" />
                 </FormItem>
               )}
             />
@@ -118,11 +127,15 @@ export function WaitlistForm() {
               name="profession"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Unique edge</FormLabel>
+                  <FormLabel className="text-gold-400">Unique edge</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your unique talent or skill" {...field} />
+                    <Input
+                      placeholder="What makes you interesting?"
+                      {...field}
+                      className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
+                    />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-gold-300" />
                 </FormItem>
               )}
             />
@@ -132,28 +145,32 @@ export function WaitlistForm() {
               name="reason"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Why do you want to join?</FormLabel>
+                  <FormLabel className="text-gold-400">Why do you want to join?</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Tell us a bit about yourself and why you're interested in joining our network..."
-                      className="min-h-[100px]"
+                      className="min-h-[100px] bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20"
                       {...field}
                     />
                   </FormControl>
-                  <FormDescription>This helps us understand if you&apos;re a good fit for our community.</FormDescription>
-                  <FormMessage />
+                  <FormDescription className="text-gold-700/70">This helps us understand if you&apos;re a good fit for our community.</FormDescription>
+                  <FormMessage className="text-gold-300" />
                 </FormItem>
               )}
             />
 
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              className="w-full bg-transparent text-gold-400 hover:bg-gold-500/10 hover:text-gold-300 border border-gold-500/30"
+              disabled={isSubmitting}
+            >
               {isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   Submitting...
                 </>
               ) : (
-                "Join Waitlist"
+                "Request Invitation"
               )}
             </Button>
           </form>
