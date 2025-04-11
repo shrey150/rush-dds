@@ -8,7 +8,7 @@ export default function About() {
     // Array of prestigious companies/institutions where members work
     const memberAffiliations = [
         "Capital One", "Google", "Goldman Sachs", "Apple", "Meta",
-        "Ramp", "Shade", "Comulate", "Skyspecs", "Modern Treasury", "Magna", "Mirosoft", "Uber",
+        "Ramp", "Shade", "Comulate", "Skyspecs", "Modern Treasury", "Magna", "Microsoft", "Uber",
         "Amazon", "IMC Trading", "OpenAI", "Qube Trading", "Jane Street", "Bubble", "Raytheon",
         "Coinbase", "MongoDB", "Databricks", "Hyperfan", "Datadog", "LinkedIn", "Pentair", "Courier Health",
         "Altrix", "LiberusAI", "Mastercard", "Unilever", "Susquehanna", "Cigna Group", "Dematic", "AMD", "Nvidia",
