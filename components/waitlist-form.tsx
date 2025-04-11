@@ -111,7 +111,7 @@ export function WaitlistForm() {
                   <FormLabel className="text-gold-400 font-serif">Email</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="yourname@email.com"
+                      placeholder="your_name@email.com"
                       type="email"
                       {...field}
                       className="bg-black/50 border-gold-500/30 text-white focus-visible:ring-gold-500/30 focus-visible:ring-offset-gold-500/20 font-serif"

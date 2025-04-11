@@ -78,7 +78,7 @@ export default function Home() {
         <div className="relative w-[800px] h-[800px]">
           <Globe className="w-full h-full opacity-90" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/90 pointer-events-none" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/90 pointer-events-none" /> */}
       </div>
 
       {/* Bottom right footer */}

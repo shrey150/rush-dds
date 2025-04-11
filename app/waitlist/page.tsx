@@ -22,7 +22,6 @@ export default function Waitlist() {
                         <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-gold-400 to-gold-600 mb-2">
                             Apply to DDS
                         </h1>
-                        <p className="text-gold-300/80">Connect with like-minded visionaries in our private community.</p>
                     </div>
 
                     <WaitlistForm />
