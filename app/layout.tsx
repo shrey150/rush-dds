@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -13,9 +14,14 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
 export const metadata: Metadata = {
-  title: "Join Diddy Daddy Saddy",
-  description: "Join the waitlist to become a Diddy Daddy Saddy member",
+  title: "DDS",
+  description: "DIES DUCIT SOL - The sun leads the day",
 };
 
 export default function RootLayout({
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-serif antialiased`}
       >
         {children}
       </body>
