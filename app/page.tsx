@@ -63,7 +63,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="border-gold-500/30 text-gold-400 hover:bg-gold-500/10 hover:text-gold-300 bg-transparent font-serif"
+              className="border-gold-500 text-gold-300 hover:bg-gold-500/20 hover:text-gold-200 bg-black/70 backdrop-blur-sm font-serif shadow-[0_0_15px_rgba(212,175,55,0.15)]"
             >
               <Link href="/waitlist">Request Invitation</Link>
             </Button>
