@@ -13,7 +13,7 @@ export default function About() {
         "Coinbase", "MongoDB", "Databricks", "Hyperfan", "Datadog", "LinkedIn", "Pentair", "Courier Health",
         "Altrix", "LiberusAI", "Mastercard", "Unilever", "Susquehanna", "Cigna Group", "Dematic", "AMD", "Nvidia",
         "Edelweiss", "IBM", "Paypal", "Palantir", "Roblox", "Netflix", "AccoAI", "Forta", "Five Rings", "Wolverine Trading",
-        "AeroVironment"
+        "AeroVironment", "Optiver", "Citadel", "Neo", "Sierra", "Browserbase", "Cognition", "DeepMind", "Listen Labs"
     ]
 
     return (
@@ -33,7 +33,7 @@ export default function About() {
             {/* Hero section with scroll indicator */}
             <section className="relative h-screen flex flex-col items-center justify-center">
                 <div className="text-center px-4">
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-gold-400 to-gold-600 mb-4">
+                    <h1 className="text-4xl md:text-6xl font-serif tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-gold-400 to-gold-600 mb-4">
                         Who Are We?
                     </h1>
                     <p className="text-lg md:text-xl text-gold-300/80 max-w-2xl mx-auto italic">
