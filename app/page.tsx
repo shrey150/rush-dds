@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Globe } from "@/components/ui/globe"
+import { LogoCarousel } from "@/components/ui/logo-carousel"
 import { ShootingStars } from "@/components/ui/shooting-stars"
 import { StarsBackground } from "@/components/ui/stars-background"
 
@@ -54,6 +55,9 @@ export default function Home() {
           <p className="text-lg md:text-xl text-gold-300/80 max-w-xl mx-auto font-light tracking-wide font-serif">
             The Sun Leads The Day
           </p>
+
+          {/* Logo Carousel */}
+          <LogoCarousel />
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
             <Button
