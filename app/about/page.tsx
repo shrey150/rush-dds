@@ -13,7 +13,8 @@ export default function About() {
         "Coinbase", "MongoDB", "Databricks", "Hyperfan", "Datadog", "LinkedIn", "Pentair", "Courier Health",
         "Altrix", "LiberusAI", "Mastercard", "Unilever", "Susquehanna", "Cigna Group", "Dematic", "AMD", "Nvidia",
         "Edelweiss", "IBM", "Paypal", "Palantir", "Roblox", "Netflix", "AccoAI", "Forta", "Five Rings", "Wolverine Trading",
-        "AeroVironment", "Optiver", "Citadel", "Neo", "Sierra", "Browserbase", "Cognition", "DeepMind", "Listen Labs"
+        "AeroVironment", "Optiver", "Citadel", "Neo", "Sierra", "Browserbase", "Cognition", "DeepMind", "Listen Labs",
+        "AgentMail", "Rox", "Tandem", "Warp"
     ]
 
     return (
