@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Globe } from "@/components/ui/globe"
+import { LogoCarousel } from "@/components/ui/logo-carousel"
 import { ShootingStars } from "@/components/ui/shooting-stars"
 import { StarsBackground } from "@/components/ui/stars-background"
 
@@ -55,11 +56,14 @@ export default function Home() {
             The Sun Leads The Day
           </p>
 
+          {/* Logo Carousel */}
+          <LogoCarousel />
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
             <Button
               asChild
               variant="outline"
-              className="border-gold-500/30 text-gold-400 hover:bg-gold-500/10 hover:text-gold-300 bg-transparent font-serif"
+              className="border-gold-500 text-gold-300 hover:bg-gold-500/20 hover:text-gold-200 bg-black/70 backdrop-blur-sm font-serif shadow-[0_0_15px_rgba(212,175,55,0.15)]"
             >
               <Link href="/waitlist">Request Invitation</Link>
             </Button>

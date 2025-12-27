@@ -85,3 +85,32 @@
   --gold-600: 45 94% 55%;
   --gold-700: 45 94% 45%;
 }
+
+/* Logo carousel animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50%));
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(calc(-50%));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+  width: max-content;
+}
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 40s linear infinite;
+  width: max-content;
+}
